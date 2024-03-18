@@ -18,8 +18,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="75dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -51,7 +51,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 android:layout_weight="1"
-                android:drawableRight="@drawable/person_ic"
+                android:drawableRight="@drawable/ic_email"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="text"
@@ -74,6 +74,7 @@
                 android:layout_marginEnd="25dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:drawableRight="@drawable/ic_lock"
                 android:hint="Mot de passe "
                 android:inputType="textPassword" />
         </LinearLayout>
@@ -111,6 +112,11 @@
                 android:text="Créer un compte"
                 android:textColor="#4CAE50" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
