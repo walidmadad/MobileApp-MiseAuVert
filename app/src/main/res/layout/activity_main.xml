@@ -7,19 +7,20 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:background="#FFFFFF"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:layout_marginBottom="75dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="120dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -73,8 +74,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="25dp"
                 android:layout_weight="1"
-                android:ems="10"
                 android:drawableRight="@drawable/ic_lock"
+                android:ems="10"
                 android:hint="Mot de passe "
                 android:inputType="textPassword" />
         </LinearLayout>
