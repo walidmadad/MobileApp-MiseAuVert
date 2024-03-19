@@ -28,18 +28,24 @@
             android:id="@+id/btn_ajouter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/green"
+            android:layout_marginBottom="20dp"
             android:text="Ajouter un Animal" />
 
         <Button
             android:id="@+id/btn_modifier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:layout_marginBottom="20dp"
             android:text="Modiifer un Animal" />
 
         <Button
             android:id="@+id/btn_supprimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:layout_marginBottom="20dp"
             android:text="Supprimer un Animal" />
 
         <TextView
