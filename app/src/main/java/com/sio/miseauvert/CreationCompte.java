@@ -95,8 +95,6 @@ public class CreationCompte extends AppCompatActivity {
                         paramV.put("password", password);
 
                         return paramV;
-
-
                     }
                 };
                 queue.add(stringRequest);

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gestion_compte">
+    tools:context=".GestionCompte">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,6 +12,26 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtView_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_profile"
+                android:text="      Bonjour "
+                android:textSize="25sp" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/lbl_gestioncompte"
@@ -28,24 +48,36 @@
             android:id="@+id/btn_ajouter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/green"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
             android:layout_marginBottom="20dp"
+            android:drawableRight="@drawable/ic_add"
+
+            android:backgroundTint="@color/green"
             android:text="Ajouter un Animal" />
 
         <Button
             android:id="@+id/btn_modifier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
             android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/orange"
+            android:drawableRight="@drawable/ic_edit"
+
             android:text="Modiifer un Animal" />
 
         <Button
             android:id="@+id/btn_supprimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/red"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
             android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/red"
+            android:drawableRight="@drawable/ic_delete"
+
             android:text="Supprimer un Animal" />
 
         <TextView

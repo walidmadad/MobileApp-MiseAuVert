@@ -25,7 +25,7 @@
             android:name=".AjouterAnimal"
             android:exported="false" />
         <activity
-            android:name=".gestion_compte"
+            android:name=".GestionCompte"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -113,6 +113,13 @@
                 android:text="Créer un compte"
                 android:textColor="#4CAE50" />
         </LinearLayout>
+        <ProgressBar
+            android:id="@+id/loadingConnexion"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
         <TextView
             android:id="@+id/error"
