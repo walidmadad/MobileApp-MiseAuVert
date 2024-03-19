@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreationCompte">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logo_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1"
+                android:src="@mipmap/logo_miseauvert_foreground"
+                app:srcCompat="@mipmap/logo_miseauvert_foreground"
+                tools:srcCompat="@mipmap/logo_miseauvert_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_nomCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/person_ic"
+                android:ems="10"
+                android:hint="Nom"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_prenomCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/person_ic"
+                android:ems="10"
+                android:hint="Prénom"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_adresseCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_home"
+                android:ems="10"
+                android:hint="Adresse"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_cpCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_location"
+                android:ems="10"
+                android:hint="Code Postal"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_villeCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_ville"
+                android:ems="10"
+                android:hint="Ville"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_dateNaissanceCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_date"
+                android:ems="10"
+                android:hint="Date de Naissance"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_telCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_tel"
+                android:ems="10"
+                android:hint="NumeroTélephone"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_emailCreate"
+                style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_email"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="text"
+                android:layerType="none"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txt_mdpCreate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_lock"
+                android:ems="10"
+                android:hint="Mot de passe "
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_createCompte"
+
+                android:layout_width="355dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+
+                android:backgroundTint="@color/green"
+                android:text="Créer un compte"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:id="@+id/reponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
