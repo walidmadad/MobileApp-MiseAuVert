@@ -42,7 +42,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_supprimerAnimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/red"

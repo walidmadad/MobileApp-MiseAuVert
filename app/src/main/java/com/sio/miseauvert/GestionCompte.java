@@ -32,6 +32,8 @@ public class GestionCompte extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(GestionCompte.this, AjouterAnimal.class);
                 startActivity(intent1);
+                intent1.putExtra("id_proprietaire", id);
+                startActivity(intent1);
             }
         });
 
@@ -46,6 +48,7 @@ public class GestionCompte extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent1 = new Intent(GestionCompte.this, SupprimerAnimal.class);
+                intent1.putExtra("id_proprietaire", id);
                 startActivity(intent1);
             }
         });
