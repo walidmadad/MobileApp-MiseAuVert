@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView txt_error;
     private Button btn_connexion, btn_creer;
     private ProgressBar progressBar;
-    Connection connection;
     SharedPreferences sharedPreferences;
 
     @Override
@@ -127,33 +126,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public boolean GetConnectionFromSQL(String email, String password){
-        try{
-            ConnectionHelper connectionHelper = new ConnectionHelper();
-            connection = connectionHelper.CONN();
-            if(connection!=null){
-                String query = "SELECT password_proprietaire FROM proprietaire WHERE email_Proprietaire = ?";
-                PreparedStatement st = connection.prepareStatement(query);
-                st.setString(1, email);
-                ResultSet rs = st.executeQuery(query);
-                if(rs.next()){
-                    String hashedPassword = rs.getString("password_proprietaire");
-                    boolean passwordsMatch = BCrypt.verifyer().verify(password.toCharArray(), hashedPassword).verified;
-                    return passwordsMatch;
-                }
-            }
-        }catch(SQLException ex){
-            ex.printStackTrace();
-        } finally {
 
-            try {
-                if(connection != null) {
-                    connection.close();
-                }
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-        }
-        return false;
-    }
 }
