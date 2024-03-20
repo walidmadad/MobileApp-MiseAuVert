@@ -1,5 +1,7 @@
 package com.sio.miseauvert;
 
+import static android.app.ProgressDialog.show;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -31,6 +34,7 @@ public class SupprimerAnimal extends AppCompatActivity {
 
     private Spinner animalAsupprimer;
     private Button supprimerAnimal;
+    String id_proprietaire;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +44,11 @@ public class SupprimerAnimal extends AppCompatActivity {
         animalAsupprimer = findViewById(R.id.animal_a_suprimmer_txt);
 
         Intent intent = getIntent();
-        String id_proprietaire = intent.getStringExtra("id_proprietaire");
+        id_proprietaire = intent.getStringExtra("id_proprietaire");
+        afficherAnimal();
 
+    }
+    public void afficherAnimal(){
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://172.20.10.2/api_Android/AfficherAnimals.php";
 
@@ -87,12 +94,44 @@ public class SupprimerAnimal extends AppCompatActivity {
 
         queue.add(stringRequest);
         supprimerAnimal = findViewById(R.id.btn_supprimerAnimal);
+
         supprimerAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                supprimerAnimal();
 
             }
         });
+    }
+    public void supprimerAnimal(){
+        String nomAnimal = animalAsupprimer.getSelectedItem().toString();
+        String url = "http://172.20.10.2/api_Android/SupprimerAnimal.php";
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(SupprimerAnimal.this, response, Toast.LENGTH_SHORT).show();
+                        afficherAnimal();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(SupprimerAnimal.this, "Une erreur s'est produite lors de la suppression.", Toast.LENGTH_SHORT).show();
+                error.printStackTrace();
+
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("nom_animal", nomAnimal);
+                params.put("id_proprietaire", id_proprietaire);
+                return params;
+            }
+        };
+        Volley.newRequestQueue(SupprimerAnimal.this).add(stringRequest);
+
+
     }
 
 }
