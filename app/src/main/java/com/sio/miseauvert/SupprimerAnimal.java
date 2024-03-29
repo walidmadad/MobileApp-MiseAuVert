@@ -50,7 +50,7 @@ public class SupprimerAnimal extends AppCompatActivity {
     }
     public void afficherAnimal(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://172.20.10.2/api_Android/AfficherAnimals.php";
+        String url = "http://172.29.21.134/api_Android/AfficherAnimals.php";
 
 
         // Analyse de la réponse JSON
@@ -105,7 +105,7 @@ public class SupprimerAnimal extends AppCompatActivity {
     }
     public void supprimerAnimal(){
         String nomAnimal = animalAsupprimer.getSelectedItem().toString();
-        String url = "http://172.20.10.2/api_Android/SupprimerAnimal.php";
+        String url = "http://172.29.104.1/api_Android/SupprimerAnimal.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override

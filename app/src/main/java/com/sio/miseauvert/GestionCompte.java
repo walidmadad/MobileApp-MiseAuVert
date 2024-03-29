@@ -40,7 +40,8 @@ public class GestionCompte extends AppCompatActivity {
         modifierBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(GestionCompte.this, AnimalAmodifierr.class);
+                startActivity(intent);
             }
         });
 

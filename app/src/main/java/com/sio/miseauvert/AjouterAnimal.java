@@ -109,9 +109,9 @@ public class AjouterAnimal extends AppCompatActivity {
 
         // Réponse JSON simulée pour le test
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://172.20.10.2/api_Android/AfficherEspece.php";
-        String url2 = "http://172.20.10.2/api_Android/AfficherPension.php";
-        String url3 = "http://172.20.10.2/api_Android/AfficherTypeGardiennage.php";
+        String url = "http://172.29.104.1/api_Android/AfficherEspece.php";
+        String url2 = "http://172.29.104.1/api_Android/AfficherPension.php";
+        String url3 = "http://172.29.104.1/api_Android/AfficherTypeGardiennage.php";
 
 
         // Analyse de la réponse JSON
@@ -226,7 +226,7 @@ public class AjouterAnimal extends AppCompatActivity {
                 String dateFin = dateFin_txt.getText().toString();
 
 
-                String url = "http://172.20.10.2/api_Android/CreateAnimal.php";
+                String url = "http://172.29.21.134/api_Android/CreateAnimal.php";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
                             @Override
