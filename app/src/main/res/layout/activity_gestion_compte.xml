@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GestionCompte">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,6 +83,16 @@
 
             android:text="Supprimer un Animal" />
 
+        <Button
+            android:id="@+id/btn_deco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:layout_marginBottom="20dp"
+            android:drawableRight="@drawable/ic_logout"
+            android:text="Déconnecter" />
+
         <TextView
             android:id="@+id/lbl_vosAnimaux"
             android:layout_width="match_parent"
@@ -90,6 +103,7 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="282dp" />
     </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

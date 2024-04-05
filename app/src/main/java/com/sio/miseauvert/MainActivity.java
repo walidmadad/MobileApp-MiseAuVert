@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 email = txt_email.getText().toString();
                 String mdp = txt_mdp.getText().toString();
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url ="http://172.29.104.1/api_Android/Login.php";
+                String url ="http://172.29.104.4/api_Android/Login.php";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {
