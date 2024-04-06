@@ -1,5 +1,6 @@
 package com.sio.miseauvert;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -21,6 +22,8 @@ public class ModifierAnimal extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Intent intent = getIntent();
+        String id_proprietaire = intent.getStringExtra("id_proprietaire");
 
     }
 }

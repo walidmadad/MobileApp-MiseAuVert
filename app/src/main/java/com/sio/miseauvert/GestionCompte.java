@@ -41,6 +41,7 @@ public class GestionCompte extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(GestionCompte.this, AnimalAmodifierr.class);
+                intent.putExtra("id_proprietaire", id);
                 startActivity(intent);
             }
         });

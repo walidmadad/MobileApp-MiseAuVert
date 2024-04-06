@@ -25,13 +25,15 @@ public class AnimalAmodifierr extends AppCompatActivity {
         });
 
         Button btn_modifier = (Button) findViewById(R.id.btn_AnimalaModifier);
-
+        Intent intent = getIntent();
+        String id_proprietaire = intent.getStringExtra("id_proprietaire");
 
         btn_modifier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AnimalAmodifierr.this, ModifierAnimal.class);
                 startActivity(intent);
+                intent.putExtra("id_proprietaire", id_proprietaire);
             }
         });
 

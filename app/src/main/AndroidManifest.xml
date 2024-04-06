@@ -16,16 +16,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ModifierAnimal"
+            android:name=".SupprimerAnimal"
             android:exported="false" />
         <activity
             android:name=".AnimalAmodifierr"
             android:exported="false" />
         <activity
             android:name=".CreationCompte"
-            android:exported="false" />
-        <activity
-            android:name=".SupprimerAnimal"
             android:exported="false" />
         <activity
             android:name=".AjouterAnimal"

@@ -27,7 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Ajouter un Animal"
+                    android:text="Modifier un Animal"
 
                     android:textAlignment="center"
                     android:textSize="24sp" />
