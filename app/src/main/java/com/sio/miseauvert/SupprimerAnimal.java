@@ -1,5 +1,9 @@
 package com.sio.miseauvert;
 
+import static android.app.ProgressDialog.show;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,17 +11,13 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -30,44 +30,30 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AnimalAmodifierr extends AppCompatActivity {
+public class SupprimerAnimal extends AppCompatActivity {
 
-    private Spinner aniamlAmodifier;
-    private Button btn_modifier,btn_gestionAnimaux;
-    private String id_proprietaire;
+    private Spinner animalAsupprimer;
+    private Button supprimerAnimal, btn_gestionAnimaux;
+    String id_proprietaire;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_animal_amodifierr);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        setContentView(R.layout.activity_supprimer_animal);
 
-        btn_modifier = (Button) findViewById(R.id.btn_AnimalaModifier);
-
-        aniamlAmodifier = findViewById(R.id.animal_a_modifier_txt);
+        animalAsupprimer = findViewById(R.id.animal_a_suprimmer_txt);
 
         Intent intent = getIntent();
         id_proprietaire = intent.getStringExtra("id_proprietaire");
         afficherAnimal();
-        btn_gestionAnimaux = findViewById(R.id.btn_gestionAnimaux);
-        btn_gestionAnimaux.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 = new Intent(AnimalAmodifierr.this, GestionCompte.class);
-                startActivity(intent1);
-                finish();
-            }
-        });
+
     }
     public void afficherAnimal(){
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://172.20.10.2/api_Android/AfficherAnimals.php";
 
+
+        // Analyse de la réponse JSON
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -82,10 +68,10 @@ public class AnimalAmodifierr extends AppCompatActivity {
                                 animals.add(nomAnimal);
                             }
 
-                            ArrayAdapter<String> adapter = new ArrayAdapter<>(AnimalAmodifierr.this,
+                            ArrayAdapter<String> adapter = new ArrayAdapter<>(SupprimerAnimal.this,
                                     android.R.layout.simple_spinner_item, animals);
                             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                            aniamlAmodifier.setAdapter(adapter);
+                            animalAsupprimer.setAdapter(adapter);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -107,17 +93,54 @@ public class AnimalAmodifierr extends AppCompatActivity {
         };
 
         queue.add(stringRequest);
-        btn_modifier = findViewById(R.id.btn_AnimalaModifier);
+        supprimerAnimal = findViewById(R.id.btn_supprimerAnimal);
 
-        btn_modifier.setOnClickListener(new View.OnClickListener() {
+        supprimerAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AnimalAmodifierr.this, ModifierAnimal.class);
-                startActivity(intent);
-                String nom_animal = aniamlAmodifier.getSelectedItem().toString();
-                intent.putExtra("id_proprietaire", id_proprietaire);
-                intent.putExtra("nom_animal", nom_animal);
+                supprimerAnimal();
+
+            }
+        });
+        btn_gestionAnimaux = findViewById(R.id.btn_gestionAnimaux);
+        btn_gestionAnimaux.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(SupprimerAnimal.this, GestionCompte.class);
+                startActivity(intent1);
+                finish();
             }
         });
     }
+    public void supprimerAnimal(){
+        String nomAnimal = animalAsupprimer.getSelectedItem().toString();
+        String url = "http://172.20.10.2/api_Android/SupprimerAnimal.php";
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(SupprimerAnimal.this, response, Toast.LENGTH_SHORT).show();
+                        afficherAnimal();
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(SupprimerAnimal.this, "Une erreur s'est produite lors de la suppression.", Toast.LENGTH_SHORT).show();
+                error.printStackTrace();
+
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<>();
+                params.put("nom_animal", nomAnimal);
+                params.put("id_proprietaire", id_proprietaire);
+                return params;
+            }
+        };
+        Volley.newRequestQueue(SupprimerAnimal.this).add(stringRequest);
+
+
+    }
+
 }

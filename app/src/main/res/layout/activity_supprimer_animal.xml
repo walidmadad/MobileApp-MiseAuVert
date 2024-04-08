@@ -2,13 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AnimalAmodifierr">
+    tools:context=".SupprimerAnimal">
 
     <LinearLayout
-        android:layout_width="412dp"
+        android:layout_width="408dp"
         android:layout_height="214dp"
         android:orientation="vertical">
 
@@ -18,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Animal A Modifer"
+            android:text="Supprimer Animal"
             android:textAlignment="center"
             android:textSize="24sp" />
 
@@ -33,21 +32,21 @@
                 android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Animal a Modifier" />
+                android:text="Animal a supprimer" />
 
             <Spinner
-                android:id="@+id/animal_a_modifier_txt"
+                android:id="@+id/animal_a_suprimmer_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_AnimalaModifier"
+            android:id="@+id/btn_supprimerAnimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange"
-            android:text="Modifier" />
+            android:backgroundTint="@color/red"
+            android:text="Supprimer" />
 
         <Button
             android:id="@+id/btn_gestionAnimaux"
@@ -57,5 +56,4 @@
             android:text="Gestion des Animaux" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
