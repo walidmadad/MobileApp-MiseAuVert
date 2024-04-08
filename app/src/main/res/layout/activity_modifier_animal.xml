@@ -47,10 +47,11 @@
                     android:text="Nom Aniaml " />
 
                 <EditText
-                    android:id="@+id/nom_txt"
+                    android:id="@+id/nom_txt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+
                     android:ems="10"
                     android:inputType="text" />
             </LinearLayout>
@@ -69,7 +70,7 @@
                     android:text="Espece" />
 
                 <Spinner
-                    android:id="@+id/espece_txt"
+                    android:id="@+id/espece_txt1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
@@ -89,7 +90,7 @@
                     android:text="Poids en Kg " />
 
                 <EditText
-                    android:id="@+id/poids_txt"
+                    android:id="@+id/poids_txt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -112,7 +113,7 @@
                     android:text="Age " />
 
                 <EditText
-                    android:id="@+id/age_txt"
+                    android:id="@+id/age_txt1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -134,7 +135,7 @@
                     android:text="Regle" />
 
                 <RadioGroup
-                    android:id="@+id/regle_txt"
+                    android:id="@+id/regle_txt1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -169,7 +170,7 @@
                     android:text="Carnet de Vaccination" />
 
                 <RadioGroup
-                    android:id="@+id/carnet_txt"
+                    android:id="@+id/carnet_txt1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -205,7 +206,7 @@
                     android:text="Vaccin a jour" />
 
                 <RadioGroup
-                    android:id="@+id/vaccin_txt"
+                    android:id="@+id/vaccin_txt1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -240,7 +241,7 @@
                     android:text="Vermifuge a jour" />
 
                 <RadioGroup
-                    android:id="@+id/vermifuge_txt"
+                    android:id="@+id/vermifuge_txt1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -274,7 +275,7 @@
                     android:text="Pension" />
 
                 <Spinner
-                    android:id="@+id/pension_txt"
+                    android:id="@+id/pension_txt1"
                     android:layout_width="213dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
@@ -295,7 +296,7 @@
                     android:text="Type Gardiennage" />
 
                 <Spinner
-                    android:id="@+id/typeGardiennage_txt"
+                    android:id="@+id/typeGardiennage_txt1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
@@ -314,7 +315,7 @@
                     android:text="Date Fin " />
 
                 <EditText
-                    android:id="@+id/dateFin_txt"
+                    android:id="@+id/dateFin_txt1"
                     android:layout_width="114dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -330,7 +331,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/btn_ajouterAnimal"
+                    android:id="@+id/btn_modiferAnimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/orange"

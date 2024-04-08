@@ -63,6 +63,19 @@ public class AnimalAmodifierr extends AppCompatActivity {
                 finish();
             }
         });
+        btn_modifier = findViewById(R.id.btn_AnimalaModifier);
+
+        btn_modifier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AnimalAmodifierr.this, ModifierAnimal.class);
+
+                String nom_animal = aniamlAmodifier.getSelectedItem().toString();
+                intent.putExtra("id_proprietaire", id_proprietaire);
+                intent.putExtra("nom_animal", nom_animal);
+                startActivity(intent);
+            }
+        });
     }
     public void afficherAnimal(){
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -107,17 +120,6 @@ public class AnimalAmodifierr extends AppCompatActivity {
         };
 
         queue.add(stringRequest);
-        btn_modifier = findViewById(R.id.btn_AnimalaModifier);
 
-        btn_modifier.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AnimalAmodifierr.this, ModifierAnimal.class);
-                startActivity(intent);
-                String nom_animal = aniamlAmodifier.getSelectedItem().toString();
-                intent.putExtra("id_proprietaire", id_proprietaire);
-                intent.putExtra("nom_animal", nom_animal);
-            }
-        });
     }
 }
