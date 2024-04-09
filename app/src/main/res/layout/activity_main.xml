@@ -93,8 +93,9 @@
                 android:id="@+id/btn_connexion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="10dp"
+
+                android:layout_margin="10dp"
+
                 android:backgroundTint="#4CAF50"
                 android:text="Se Connecter"></Button>
 
@@ -110,9 +111,8 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="15dp"
 
+                android:layout_margin="10dp"
                 android:backgroundTint="#C1DCC2"
                 android:text="Créer un compte"
                 android:textColor="#4CAE50" />
