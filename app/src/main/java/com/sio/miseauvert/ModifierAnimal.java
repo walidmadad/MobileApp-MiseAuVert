@@ -48,7 +48,7 @@ public class ModifierAnimal extends AppCompatActivity {
     private List<String> especeList = new ArrayList<>();
     private List<String> typeGardiennageList = new ArrayList<>();
     private String getregleSelected() {
-        RadioGroup txt = findViewById(R.id.regle_txt);
+        RadioGroup txt = findViewById(R.id.regle_txt1);
         int id = txt.getCheckedRadioButtonId();
 
         if (id != -1) {
@@ -59,7 +59,7 @@ public class ModifierAnimal extends AppCompatActivity {
         }
     }
     private String getVermifugeSelected() {
-        RadioGroup txt = findViewById(R.id.vermifuge_txt);
+        RadioGroup txt = findViewById(R.id.vermifuge_txt1);
         int id = txt.getCheckedRadioButtonId();
 
         if (id != -1) {
@@ -70,7 +70,7 @@ public class ModifierAnimal extends AppCompatActivity {
         }
     }
     private String getVaccinSelected() {
-        RadioGroup txt = findViewById(R.id.vaccin_txt);
+        RadioGroup txt = findViewById(R.id.vaccin_txt1);
         int id = txt.getCheckedRadioButtonId();
 
         if (id != -1) {
@@ -81,7 +81,7 @@ public class ModifierAnimal extends AppCompatActivity {
         }
     }
     private String getCarnetSelected() {
-        RadioGroup txt = findViewById(R.id.carnet_txt);
+        RadioGroup txt = findViewById(R.id.carnet_txt1);
         int id = txt.getCheckedRadioButtonId();
 
         if (id != -1) {
@@ -135,7 +135,18 @@ public class ModifierAnimal extends AppCompatActivity {
         btn_modifierAnimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                modifierAnimal();
+                nomAnimal = nom_txt.getText().toString();
+                poids = poids_txt.getText().toString();
+                age = age_txt.getText().toString();
+                espece = especeSpinner.getSelectedItem().toString();
+                pension = pensionSpinner.getSelectedItem().toString();
+                typeGardiennage = typeGardiennageSpinner.getSelectedItem().toString();
+                regle = getregleSelected();
+                carnet = getCarnetSelected();
+                vaccin = getVaccinSelected();
+                vermifuge = getVermifugeSelected();
+                dateFin = dateFin_txt.getText().toString();
+                modifierAnimal(nomAnimal, poids, age, espece, pension, typeGardiennage,regle, carnet,vaccin,vermifuge, dateFin);
             }
         });
 
@@ -154,9 +165,9 @@ public class ModifierAnimal extends AppCompatActivity {
          // Déclarer la liste en dehors de la méthode
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://172.20.10.2/api_Android/AfficherEspece.php";
-        String url2 = "http://172.20.10.2/api_Android/AfficherPension.php";
-        String url3 = "http://172.20.10.2/api_Android/AfficherTypeGardiennage.php";
+        String url = "http://172.29.104.4/api_Android/AfficherEspece.php";
+        String url2 = "http://172.29.104.4/api_Android/AfficherPension.php";
+        String url3 = "http://172.29.104.4/api_Android/AfficherTypeGardiennage.php";
 
         // Analyse de la réponse JSON pour les espèces
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -244,7 +255,7 @@ public class ModifierAnimal extends AppCompatActivity {
     }
     public void afficherDonnees(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://172.20.10.2/api_Android/informationsSelected.php";
+        String url = "http://172.29.104.4/api_Android/informationsSelected.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -353,20 +364,10 @@ public class ModifierAnimal extends AppCompatActivity {
         queue.add(stringRequest);
     }
 
-    private void modifierAnimal() {
-        String url = "http://172.20.10.2/api_Android/ModifierAnimal.php";
+    private void modifierAnimal(String nomAnimal,String poids, String age, String espece, String pension, String typeGardiennage, String regle, String vaccin, String carnet, String vermifuge, String dateFin) {
+        String url = "http://172.29.104.4/api_Android/ModifierAnimal.php";
 
-        String nomAnimal = nom_txt.getText().toString();
-        String poids = poids_txt.getText().toString();
-        String age = age_txt.getText().toString();
-        String espece = especeSpinner.getSelectedItem().toString();
-        String pension = pensionSpinner.getSelectedItem().toString();
-        String typeGardiennage = typeGardiennageSpinner.getSelectedItem().toString();
-        String regle = getregleSelected();
-        String carnet = getCarnetSelected();
-        String vaccin = getVaccinSelected();
-        String vermifuge = getVermifugeSelected();
-        String dateFin = dateFin_txt.getText().toString();
+
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
@@ -380,12 +381,14 @@ public class ModifierAnimal extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 // Gérer les erreurs de la requête
                 error.printStackTrace();
+                Log.e("VolleyError", error.toString());
             }
         }) {
             @Override
             protected Map<String, String> getParams() {
                 // Paramètres de la requête POST
                 Map<String, String> params = new HashMap<>();
+                params.put("id_proprietaire",id_proprietaire);
                 params.put("id_animal", id_animal);
                 params.put("nom_animal", nomAnimal);
                 params.put("poids", poids);

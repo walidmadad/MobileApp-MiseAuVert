@@ -59,7 +59,7 @@ public class CreationCompte extends AppCompatActivity {
                 password = String.valueOf(txt_mdp.getText());
                 tel = String.valueOf(txt_tel.getText());
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                String url ="http://172.20.10.2/api_Android/CreateAccount.php";
+                String url ="http://172.29.104.4/api_Android/CreateAccount.php";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         new Response.Listener<String>() {

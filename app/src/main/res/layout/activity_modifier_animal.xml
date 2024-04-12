@@ -20,6 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -38,6 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -60,6 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -80,6 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -102,6 +106,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
@@ -125,6 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -166,6 +172,7 @@
                     android:id="@+id/textView7"
                     android:layout_width="288dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="Carnet de Vaccination" />
 
@@ -173,6 +180,7 @@
                     android:id="@+id/carnet_txt1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
@@ -195,6 +203,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_margin="10dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
@@ -230,6 +239,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_margin="10dp"
                 android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
@@ -265,6 +275,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -286,6 +297,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -306,6 +318,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -328,12 +341,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:orientation="vertical">
 
                 <Button
                     android:id="@+id/btn_modiferAnimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:backgroundTint="@color/orange"
                         android:text="Modifier"/>
 
@@ -341,6 +356,7 @@
                     android:id="@+id/btn_gestionAnimaux"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="Gestion des Animaux" />
             </LinearLayout>

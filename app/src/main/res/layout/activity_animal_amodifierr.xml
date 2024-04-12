@@ -8,8 +8,8 @@
     tools:context=".AnimalAmodifierr">
 
     <LinearLayout
-        android:layout_width="412dp"
-        android:layout_height="214dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -25,6 +25,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
 
@@ -46,6 +47,7 @@
             android:id="@+id/btn_AnimalaModifier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:backgroundTint="@color/orange"
             android:text="Modifier" />
 
@@ -53,6 +55,7 @@
             android:id="@+id/btn_gestionAnimaux"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="Gestion des Animaux" />
 

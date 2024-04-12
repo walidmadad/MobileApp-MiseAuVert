@@ -44,4 +44,3 @@ public class AnimalAdapter extends ArrayAdapter<Animal> {
         return convertView;
     }
 }
-
