@@ -16,26 +16,26 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Vue.ModifierAnimal"
+            android:name=".ModifierAnimal"
             android:exported="false" />
 
         <activity
-            android:name=".Vue.SupprimerAnimal"
+            android:name=".SupprimerAnimal"
             android:exported="false" />
         <activity
-            android:name=".Vue.AnimalAmodifierr"
+            android:name=".AnimalAmodifierr"
             android:exported="false" />
         <activity
-            android:name=".Vue.CreationCompte"
+            android:name=".CreationCompte"
             android:exported="false" />
         <activity
-            android:name=".Vue.AjouterAnimal"
+            android:name=".AjouterAnimal"
             android:exported="false" />
         <activity
-            android:name=".Vue.GestionCompte"
+            android:name=".GestionCompte"
             android:exported="false" />
         <activity
-            android:name=".Vue.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

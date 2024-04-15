@@ -1,4 +1,4 @@
-package com.sio.miseauvert.Vue;
+package com.sio.miseauvert;
 
 public class TypeGardiennage {
     private int idTypeGardiennage;

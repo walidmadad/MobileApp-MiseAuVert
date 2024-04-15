@@ -1,4 +1,4 @@
-package com.sio.miseauvert.Vue;
+package com.sio.miseauvert;
 
 public class Pension {
     private int idPension;

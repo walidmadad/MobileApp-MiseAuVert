@@ -1,4 +1,4 @@
-package com.sio.miseauvert.Vue;
+package com.sio.miseauvert;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +17,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.sio.miseauvert.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -90,7 +89,7 @@ public class GestionCompte extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        List<Animal> animals = new ArrayList<>();
+                        List<com.sio.miseauvert.Animal> animals = new ArrayList<>();
                         try {
                             Log.d("Response", response);
                             JSONArray jsonArray = new JSONArray(response);
@@ -107,13 +106,13 @@ public class GestionCompte extends AppCompatActivity {
                                 String vermifuge = animalObject.getString("vermifuge");
                                 String regle = animalObject.getString("regle");
                                 String espece = animalObject.getString("espece");
-                                Animal animal = new Animal(idAnimal, nomAnimal, pension, typeGardiennage, poids, age, carnet, vaccin, vermifuge, regle, espece);
+                                com.sio.miseauvert.Animal animal = new Animal(idAnimal, nomAnimal, pension, typeGardiennage, poids, age, carnet, vaccin, vermifuge, regle, espece);
                                 animals.add(animal);
                             }
 
 
                             // Créer un adaptateur personnalisé pour afficher les noms d'animaux et leurs espèces
-                            AnimalAdapter adapter = new AnimalAdapter(GestionCompte.this, animals);
+                            com.sio.miseauvert.AnimalAdapter adapter = new AnimalAdapter(GestionCompte.this, animals);
                             listAnimal.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.sio.miseauvert.Vue;
+package com.sio.miseauvert;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +17,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.sio.miseauvert.R;
 
 import java.util.HashMap;
 import java.util.Map;
