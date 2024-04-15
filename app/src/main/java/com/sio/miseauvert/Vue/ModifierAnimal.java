@@ -166,9 +166,9 @@ public class ModifierAnimal extends AppCompatActivity {
          // Déclarer la liste en dehors de la méthode
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://172.29.104.4/api_Android/AfficherEspece.php";
-        String url2 = "http://172.29.104.4/api_Android/AfficherPension.php";
-        String url3 = "http://172.29.104.4/api_Android/AfficherTypeGardiennage.php";
+        String url = "http://172.29.104.4/api_Android/GAP/AfficherEspece.php";
+        String url2 = "http://172.29.104.4/api_Android/GAP/AfficherPension.php";
+        String url3 = "http://172.29.104.4/api_Android/GAP/AfficherTypeGardiennage.php";
 
         // Analyse de la réponse JSON pour les espèces
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -256,7 +256,7 @@ public class ModifierAnimal extends AppCompatActivity {
     }
     public void afficherDonnees(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://172.29.104.4/api_Android/informationsSelected.php";
+        String url = "http://172.29.104.4/api_Android/GAP/informationsSelected.php";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -366,7 +366,7 @@ public class ModifierAnimal extends AppCompatActivity {
     }
 
     private void modifierAnimal(String nomAnimal,String poids, String age, String espece, String pension, String typeGardiennage, String regle, String vaccin, String carnet, String vermifuge, String dateFin) {
-        String url = "http://172.29.104.4/api_Android/ModifierAnimal.php";
+        String url = "http://172.29.104.4/api_Android/GAP/ModifierAnimal.php";
 
 
 

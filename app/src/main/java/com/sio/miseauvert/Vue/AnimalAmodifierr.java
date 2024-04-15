@@ -80,7 +80,7 @@ public class AnimalAmodifierr extends AppCompatActivity {
     }
     public void afficherAnimal(){
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://172.29.104.4/api_Android/AfficherAnimals.php";
+        String url = "http://172.29.104.4/api_Android/GAP/AfficherAnimals.php";
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
