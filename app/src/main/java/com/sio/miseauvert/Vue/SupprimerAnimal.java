@@ -1,4 +1,4 @@
-package com.sio.miseauvert;
+package com.sio.miseauvert.Vue;
 
 import static android.app.ProgressDialog.show;
 
@@ -17,9 +17,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.sio.miseauvert.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

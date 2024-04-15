@@ -1,4 +1,4 @@
-package com.sio.miseauvert;
+package com.sio.miseauvert.Vue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,15 +17,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.sio.miseauvert.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
